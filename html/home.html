@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,5 initial-scale=1.0">
+    <title>Tugas Praktikum 07</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style_sidebar.css">
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <aside class="sidebar" id="sidebar">
+        <h2>Praktikum</h2>
+        <a href="../html/home.html">Praktikum 7 - Viskositas</a>
+        <a href="../html/07_kecepatan.html">Praktikum 7 - kecepatan</a>
+ 
+    </aside>
+    <div id="container">
+        <h1>Menghitung Viskositas dan Kesalahannya</h1>
+        <form id="calcForm">
+            <label for="r">r (mm):</label>
+            <input type="number" id="r" name="r" step="0.001" required>
+            
+            <label for="v0">v0 (cm/s):</label>
+            <input type="number" id="v0" name="v0" step="0.001" required>
+
+            <label for="delt_v">Δv (cm/s):</label>
+            <input type="number" id="delt_v" name="delt_v" step="0.001" required>
+
+            <label for="liquid">Jenis Cairan:</label>
+            <select id="liquid" name="liquid" required>
+                <option value="1040">Sabun (ρ = 1040 kg/m³)</option>
+                <option value="800">Minyak (ρ = 800 kg/m³)</option>
+                <option value="1260">Gliserin (ρ = 1260 kg/m³)</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+        <p id="result"></p>
+        <p id="errorResult"></p>
+    </div>
+
+    <script src="../javascirpt/script.js"></script>
+</body>
+</html>
